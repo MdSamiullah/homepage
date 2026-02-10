@@ -1,0 +1,32 @@
+name: Update Scholar Citations
+
+on:
+  schedule:
+    - cron: "0 3 * * 0"   # weekly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install scholarly pyyaml
+
+      - name: Fetch citations
+        env:
+          SCHOLAR_ID: TvgYhREAAAAJ
+        run: |
+          python scripts/fetch_scholar_citations.py "$SCHOLAR_ID"
+
+      - name: Commit updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/citations.yml
+          git commit -m "ci: update scholar citations" || echo "No changes"
+          git push
