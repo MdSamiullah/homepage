@@ -1,6 +1,13 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: Home
+permalink: /
 ---
+
+## Welcome
+Write a short introduction here.
+
+### Highlights
+- Research interests
+- Current projects
+- Latest publication link

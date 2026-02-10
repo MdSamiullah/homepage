@@ -1,0 +1,47 @@
+<div class="profile">
+  <img class="profile__photo" src="{{ site.profile.photo | relative_url }}" alt="{{ site.profile.name }}" />
+
+  <div class="profile__name">{{ site.profile.name }}</div>
+  <div class="profile__tagline">{{ site.description }}</div>
+
+  {% if site.profile.location %}
+    <div class="profile__meta">📍 {{ site.profile.location }}</div>
+  {% endif %}
+
+  {% if site.profile.designations %}
+    <ul class="profile__list">
+      {% for d in site.profile.designations %}
+        <li>{{ d }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="social">
+    {% if site.social.email %}
+      <a class="chip" href="mailto:{{ site.social.email }}">Email</a>
+    {% endif %}
+    {% if site.social.website %}
+      <a class="chip" href="{{ site.social.website }}" target="_blank" rel="noreferrer">Website</a>
+    {% endif %}
+    {% if site.social.github %}
+      <a class="chip" href="https://github.com/{{ site.social.github }}" target="_blank" rel="noreferrer">GitHub</a>
+    {% endif %}
+    {% if site.social.linkedin %}
+      <a class="chip" href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+    {% endif %}
+    {% if site.social.google_scholar %}
+      {% assign gs = site.social.google_scholar %}
+      {% if gs contains "http" %}
+        <a class="chip" href="{{ gs }}" target="_blank" rel="noreferrer">Scholar</a>
+      {% else %}
+        <a class="chip" href="https://scholar.google.com/citations?user={{ gs }}" target="_blank" rel="noreferrer">Scholar</a>
+      {% endif %}
+    {% endif %}
+    {% if site.social.orcid %}
+      <a class="chip" href="https://orcid.org/{{ site.social.orcid }}" target="_blank" rel="noreferrer">ORCID</a>
+    {% endif %}
+    {% if site.social.twitter %}
+      <a class="chip" href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noreferrer">Twitter/X</a>
+    {% endif %}
+  </div>
+</div>

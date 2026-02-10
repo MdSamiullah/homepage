@@ -29,6 +29,42 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Sidebar profile
+profile:
+  name: "Your Name"
+  photo: "/assets/img/profile.jpg"
+  designations:
+    - "PhD Student, Monash University"
+    - "Research Assistant, XYZ Lab"
+    - "Interests: ML, NLP, HCI"
+  location: "Melbourne, Australia"
+
+social:
+  email: "you@domain.com"
+  github: "yourusername"
+  linkedin: "your-linkedin-handle"
+  google_scholar: "YOUR_SCHOLAR_ID_OR_FULL_URL"
+  orcid: "0000-0000-0000-0000"
+  twitter: "yourhandle"
+  website: "https://yourdomain.com"
+
+# Top navigation tabs
+nav:
+  - title: "Publications"
+    url: "/publications/"
+  - title: "Certificates"
+    url: "/certificates/"
+  - title: "Teaching"
+    url: "/teaching/"
+  - title: "CV"
+    url: "/cv/"
+  - title: "Portfolio"
+    url: "/portfolio/"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
 # Build settings
 theme: minima
 plugins:
