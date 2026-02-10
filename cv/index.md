@@ -4,8 +4,22 @@ title: CV
 permalink: /cv/
 ---
 
-Download my CV: **[PDF]({{ '/assets/cv/CV.pdf' | relative_url }})**
+{% assign cv_pdf = '/assets/cv/CV.pdf' | relative_url %}
 
-## Education
-## Experience
-## Skills
+<div class="cv-toolbar">
+  <div class="cv-toolbar__left">
+    <div class="cv-toolbar__title">Curriculum Vitae (PDF)</div>
+    <div class="cv-toolbar__hint">
+      If the preview doesn’t load, use the download button.
+    </div>
+  </div>
+
+  <a class="btn" href="{{ cv_pdf }}" target="_blank" rel="noreferrer">Download PDF</a>
+</div>
+
+<iframe
+  class="cv-frame"
+  src="{{ cv_pdf }}"
+  title="CV PDF Preview"
+  loading="lazy">
+</iframe>
