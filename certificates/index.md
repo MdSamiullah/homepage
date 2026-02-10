@@ -4,5 +4,5 @@ title: Certificates
 permalink: /certificates/
 ---
 
-- Certificate Name — Issuer — Year (link)
-- Certificate Name — Issuer — Year (link)
+- Certificate — Issuer — Year — [Link](#)
+- Certificate — Issuer — Year — [Link](#)

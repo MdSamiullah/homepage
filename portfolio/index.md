@@ -4,5 +4,6 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-## Featured Projects
-- **Project name** — one line summary — [GitHub](#) · [Demo](#)
+## Featured
+- **Project Name** — one-liner — [GitHub](#) · [Demo](#)
+- **Project Name** — one-liner — [GitHub](#)

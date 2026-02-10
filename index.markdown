@@ -5,9 +5,9 @@ permalink: /
 ---
 
 ## Welcome
-Write a short introduction here.
+I’m **Md Samiullah**. Write a 2–3 sentence intro here (research interests + what you’re building/teaching).
 
-### Highlights
-- Research interests
-- Current projects
-- Latest publication link
+### Quick links
+- [Publications]({{ '/publications/' | relative_url }})
+- [CV]({{ '/cv/' | relative_url }})
+- [Portfolio]({{ '/portfolio/' | relative_url }})

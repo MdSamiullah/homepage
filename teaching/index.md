@@ -5,7 +5,7 @@ permalink: /teaching/
 ---
 
 ## Courses
-- Unit name (Role, Semester/Year)
+- Unit name — role — Semester/Year
 
-## Supervision
-- Student / Project / Year
+## Mentoring / Supervision
+- Student / project — Year

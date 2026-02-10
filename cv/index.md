@@ -4,8 +4,7 @@ title: CV
 permalink: /cv/
 ---
 
-Download my CV: **[PDF]( /assets/cv/CV.pdf )**  
-(Upload your PDF to `assets/cv/CV.pdf`)
+Download my CV: **[PDF]({{ '/assets/cv/CV.pdf' | relative_url }})**
 
 ## Education
 ## Experience
