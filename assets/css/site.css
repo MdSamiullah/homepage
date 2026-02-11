@@ -93,6 +93,46 @@ a{color:inherit}
   color: var(--text);
 }
 
+/* === Profile contact list (icons + one line each) === */
+
+.profile-contact{
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--muted, #4b5563);
+  word-break: break-word;
+}
+
+.contact-item a{
+  text-decoration: none;
+  color: var(--text, #111827);
+  font-weight: 600;
+}
+
+.contact-item a:hover{
+  text-decoration: underline;
+}
+
+.contact-icon{
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(17,24,39,.06);
+  font-size: 12px;
+  font-weight: 900;
+}
+
 
 /* .profile__photo{
   width:80%;

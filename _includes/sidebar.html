@@ -5,33 +5,60 @@
   <div class="profile__tagline">{{ site.description }}</div>
 
   {% if site.profile.designations %}
-    <ul class="profile__list">
-      {% for d in site.profile.designations %}
-        <li>{{ d }}</li>
-      {% endfor %}
-    </ul>
+  <ul class="profile__list">
+    {% for d in site.profile.designations %}
+    <li>{{ d }}</li>
+    {% endfor %}
+  </ul>
   {% endif %}
 
-  <div class="social">
-    {% if site.social.email %}<a class="chip" href="mailto:{{ site.social.email }}">Email</a>{% endif %}
-    {% if site.social.website %}<a class="chip" href="{{ site.social.website }}" target="_blank" rel="noreferrer">Website</a>{% endif %}
-    {% if site.social.github %}<a class="chip" href="https://github.com/{{ site.social.github }}" target="_blank" rel="noreferrer">GitHub</a>{% endif %}
-    {% if site.social.linkedin %}<a class="chip" href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>{% endif %}
+  <div class="profile-contact">
 
-    {% if site.social.google_scholar %}
-      {% assign gs = site.social.google_scholar %}
-      {% if gs contains "http" %}
-        <a class="chip" href="{{ gs }}" target="_blank" rel="noreferrer">Scholar</a>
-      {% else %}
-        <a class="chip" href="https://scholar.google.com/citations?user={{ gs }}" target="_blank" rel="noreferrer">Scholar</a>
-      {% endif %}
+    {% if site.social.email %}
+    <div class="contact-item">
+      <span class="contact-icon">
+        ✉️
+      </span>
+      <a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a>
+    </div>
     {% endif %}
 
-    {% if site.social.researchgate %}
-      <a class="chip" href="https://www.researchgate.net/profile/{{ site.social.researchgate }}" target="_blank" rel="noreferrer">ResearchGate</a>
+    {% if site.social.twitter %}
+    <div class="contact-item">
+      <span class="contact-icon">𝕏</span>
+      <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noreferrer">
+        @{{ site.social.twitter }}
+      </a>
+    </div>
     {% endif %}
 
-    {% if site.social.orcid %}<a class="chip" href="https://orcid.org/{{ site.social.orcid }}" target="_blank" rel="noreferrer">ORCID</a>{% endif %}
-    {% if site.social.twitter %}<a class="chip" href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noreferrer">Twitter/X</a>{% endif %}
+    {% if site.social.github %}
+    <div class="contact-item">
+      <span class="contact-icon">💻</span>
+      <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noreferrer">
+        github.com/{{ site.social.github }}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if site.social.linkedin %}
+    <div class="contact-item">
+      <span class="contact-icon">in</span>
+      <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noreferrer">
+        linkedin.com/in/{{ site.social.linkedin }}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if site.social.facebook %}
+    <div class="contact-item">
+      <span class="contact-icon">f</span>
+      <a href="https://facebook.com/{{ site.social.facebook }}" target="_blank" rel="noreferrer">
+        facebook.com/{{ site.social.facebook }}
+      </a>
+    </div>
+    {% endif %}
+
   </div>
+
 </div>

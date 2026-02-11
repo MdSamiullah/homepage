@@ -33,14 +33,15 @@ profile:
     - "Melbourne, Australia"
 
 social:
-  email: "hqadorillv@p.monash.edu"
-  website: "https://yourwebsite.com"
-  github: "yourusername"
-  linkedin: "your-linkedin-handle"
-  google_scholar: "YOUR_SCHOLAR_ID_OR_FULL_URL"
-  researchgate: "Your-ResearchGate-Handle"   # e.g. Md-Samiullah-2
-  orcid: "0000-0000-0000-0000"
-  twitter: "yourhandle"
+  email: "samiullahmdsami@gmail.com"
+  website: "https://mdsamiullah.github.io/homepage/"
+  github: "mdsamiullah"
+  linkedin: "https://www.linkedin.com/in/md-samiullah/"
+  google_scholar: "https://scholar.google.com/citations?user=TvgYhREAAAAJ&hl=en&oi=ao"
+  # researchgate: "Your-ResearchGate-Handle"   # e.g. Md-Samiullah-2
+  orcid: "0000-0001-8212-1938"
+  # twitter: "yourhandle"
+  facebook: "samicse"
 
 nav:
   - title: "Publications"
