@@ -199,6 +199,12 @@ a{color:inherit}
 }
 .pub-btn:hover{background:rgba(37,99,235,.08); border-color: rgba(37,99,235,.25)}
 
+.pubs-scroll{
+  max-height: 75vh;
+  overflow: auto;
+  padding: 10px 12px;
+}
+
 /* Footer */
 .footer{
   max-width:var(--max);
