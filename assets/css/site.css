@@ -176,7 +176,7 @@ a{color:inherit}
 }
 
 /* Publications cards (if you use them) */
-.pub-card{
+/* .pub-card{
   border:1px solid var(--line);
   background:#fff;
   border-radius:16px;
@@ -203,7 +203,138 @@ a{color:inherit}
   max-height: 75vh;
   overflow: auto;
   padding: 10px 12px;
+} */
+
+/* === Publications page: citations panel + scrollable list (drop-in) === */
+
+/* 2-column layout */
+.pubs-grid{
+  display:grid;
+  grid-template-columns: 360px 1fr;
+  gap: 14px;
+  align-items:start;
 }
+@media (max-width: 960px){
+  .pubs-grid{ grid-template-columns: 1fr; }
+}
+
+/* Generic panels */
+.panel{
+  border: 1px solid var(--line, rgba(17,24,39,.12));
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(17,24,39,.08);
+  overflow: hidden;
+}
+.panel__hd{
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line, rgba(17,24,39,.12));
+}
+.panel__title{
+  margin: 0;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--text, #111827);
+}
+.panel__sub{
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted, #4b5563);
+}
+.panel__bd{ padding: 12px 14px; }
+
+/* Scrollable publications list container */
+.pubs-scroll{
+  max-height: 75vh;
+  overflow: auto;
+  padding: 10px 12px;
+}
+.pubs-scroll::-webkit-scrollbar{ width: 10px; }
+.pubs-scroll::-webkit-scrollbar-thumb{
+  background: rgba(17,24,39,.15);
+  border-radius: 999px;
+}
+.pubs-scroll::-webkit-scrollbar-track{ background: transparent; }
+
+/* Citations mini bar chart */
+.cite-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin: 8px 0;
+}
+.cite-year{
+  width: 52px;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--muted, #4b5563);
+}
+.cite-barwrap{
+  flex: 1;
+  height: 12px;
+  background: rgba(17,24,39,.06);
+  border: 1px solid var(--line, rgba(17,24,39,.12));
+  border-radius: 999px;
+  overflow: hidden;
+}
+.cite-bar{
+  height: 100%;
+  width: var(--w);
+  background: linear-gradient(90deg, rgba(37,99,235,.55), rgba(124,58,237,.45));
+}
+.cite-val{
+  width: 44px;
+  text-align:right;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--muted, #4b5563);
+}
+
+/* Publication cards (safe if you already have them; these won't break anything) */
+.pub-card{
+  border: 1px solid var(--line, rgba(17,24,39,.12));
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  margin: 10px 0;
+}
+.pub-title{ font-weight: 900; color: var(--text, #111827); margin: 0 0 6px; }
+.pub-meta{ margin: 0; color: var(--muted, #4b5563); }
+.pub-links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.pub-btn{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line, rgba(17,24,39,.12));
+  background: #fff;
+  text-decoration: none;
+  color: var(--text, #111827);
+  font-size: 13px;
+  font-weight: 700;
+}
+.pub-btn:hover{
+  background: rgba(37,99,235,.08);
+  border-color: rgba(37,99,235,.25);
+}
+
+/* Optional helpers */
+.btn{
+  display:inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line, rgba(17,24,39,.12));
+  background: #fff;
+  text-decoration: none;
+  color: var(--text, #111827);
+  font-size: 14px;
+  font-weight: 700;
+}
+.btn:hover{
+  background: rgba(37,99,235,.08);
+  border-color: rgba(37,99,235,.25);
+}
+.muted{ color: var(--muted, #4b5563); }
+
 
 /* Footer */
 .footer{
