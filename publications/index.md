@@ -6,7 +6,7 @@ permalink: /publications/
 
 <div class="pubs-grid">
 
-  <!-- LEFT: Citations chart -->
+  <!-- LEFT: Citations chart (Scholar-like vertical bars) -->
   <section class="panel">
     <div class="panel__hd">
       <h2 class="panel__title">Citations</h2>
@@ -14,28 +14,41 @@ permalink: /publications/
     </div>
 
     <div class="panel__bd">
-      {% assign cits = site.data.citations | sort: "year" | reverse %}
+      {% assign cits = site.data.citations | sort: "year" %}
 
       {% if cits and cits.size > 0 %}
         {% assign maxc = 0 %}
+        {% assign total = 0 %}
         {% for r in cits %}
           {% if r.count > maxc %}{% assign maxc = r.count %}{% endif %}
+          {% assign total = total | plus: r.count %}
         {% endfor %}
 
-        {% for r in cits %}
-          {% assign pct = 0 %}
-          {% if maxc > 0 %}
-            {% assign pct = r.count | times: 100 | divided_by: maxc %}
-          {% endif %}
-
-          <div class="cite-row">
-            <div class="cite-year">{{ r.year }}</div>
-            <div class="cite-barwrap">
-              <div class="cite-bar" style="--w: {{ pct }}%;"></div>
-            </div>
-            <div class="cite-val">{{ r.count }}</div>
+        <div class="scholar-chart">
+          <div class="scholar-chart__top">
+            <div class="scholar-chart__title">Citations per year</div>
+            <div class="scholar-chart__meta">Total (shown years): {{ total }}</div>
           </div>
-        {% endfor %}
+
+          <div class="scholar-bars">
+            {% for r in cits %}
+              {% assign pct = 0 %}
+              {% if maxc > 0 %}
+                {% assign pct = r.count | times: 100 | divided_by: maxc %}
+              {% endif %}
+              {% assign hpx = pct | times: 160 | divided_by: 100 %}
+
+              <div class="scholar-bar">
+                <div class="scholar-bar__col"
+                     style="--h: {{ hpx }}px;"
+                     data-tip="{{ r.year }}: {{ r.count }}">
+                </div>
+                <div class="scholar-bar__year">{{ r.year }}</div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
       {% else %}
         <p class="muted">
           No citation data yet. Make sure your workflow creates <code>_data/citations.yml</code>.
