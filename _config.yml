@@ -27,16 +27,15 @@ profile:
   name: "Md Samiullah"
   photo: "/assets/img/profile.jpg"
   designations:
-    - "PhD Student, Monash University"
-    - "Teaching Associate / Tutor"
-    - "Research Interests: (e.g., ML, NLP, HCI)"
+    - "Research Fellow, MCRI, RCH"
+    - "Research Interests: AI, ML, BioStat, Bayesian"
     - "Melbourne, Australia"
 
 social:
   email: "samiullahmdsami@gmail.com"
   website: "https://mdsamiullah.github.io/homepage/"
   github: "mdsamiullah"
-  linkedin: "https://www.linkedin.com/in/md-samiullah/"
+  linkedin: "md-samiullah"
   google_scholar: "https://scholar.google.com/citations?user=TvgYhREAAAAJ&hl=en&oi=ao"
   # researchgate: "Your-ResearchGate-Handle"   # e.g. Md-Samiullah-2
   orcid: "0000-0001-8212-1938"
